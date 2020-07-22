@@ -24,7 +24,6 @@ def pwned_api_check(password):
     response = requests_api_data(first_five_char)
     return get_password_leaks_count(response, tail)
 
-#requests_api_data('wq3')
 def main(args):
     for password in args:
         count = pwned_api_check(password)
